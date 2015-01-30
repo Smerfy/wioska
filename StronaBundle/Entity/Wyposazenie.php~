@@ -1,0 +1,74 @@
+<?php
+
+namespace StronaBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Wyposazenie
+ *
+ * @ORM\Table(name="wyposazenie")
+ * @ORM\Entity
+ */
+class Wyposazenie
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idwyposazenie", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idwyposazenie;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="tv", type="boolean", nullable=true)
+     */
+    private $tv;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="czajnik", type="boolean", nullable=true)
+     */
+    private $czajnik;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="lodowka", type="boolean", nullable=true)
+     */
+    private $lodowka;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="microfalowka", type="boolean", nullable=true)
+     */
+    private $microfalowka;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="wifi", type="boolean", nullable=true)
+     */
+    private $wifi;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="lozko1os", type="integer", nullable=true)
+     */
+    private $lozko1os;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="lozko2os", type="integer", nullable=true)
+     */
+    private $lozko2os;
+
+
+}

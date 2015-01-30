@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Wyposazenie" table="wyposazenie">
+    <id name="idwyposazenie" type="integer" column="idwyposazenie">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="tv" type="boolean" column="tv" nullable="true"/>
+    <field name="czajnik" type="boolean" column="czajnik" nullable="true"/>
+    <field name="lodowka" type="boolean" column="lodowka" nullable="true"/>
+    <field name="microfalowka" type="boolean" column="microfalowka" nullable="true"/>
+    <field name="wifi" type="boolean" column="wifi" nullable="true"/>
+    <field name="lozko1os" type="integer" column="lozko1os" nullable="true"/>
+    <field name="lozko2os" type="integer" column="lozko2os" nullable="true"/>
+  </entity>
+</doctrine-mapping>

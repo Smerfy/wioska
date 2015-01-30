@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Klient" table="klient">
+    <indexes>
+      <index name="fk_klient_domek1_idx" columns="domek_iddomek"/>
+    </indexes>
+    <id name="idklient" type="integer" column="idklient">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="imie" type="string" column="imie" length="45" nullable="false"/>
+    <field name="nazwisko" type="string" column="nazwisko" length="45" nullable="false"/>
+    <field name="pesel" type="string" column="pesel" length="45" nullable="false"/>
+    <field name="dataUrodzenia" type="string" column="data_urodzenia" length="45" nullable="false"/>
+    <field name="miejscowosc" type="string" column="miejscowosc" length="45" nullable="false"/>
+    <field name="ulica" type="string" column="ulica" length="45" nullable="false"/>
+    <field name="kodPocztowy" type="string" column="kod_pocztowy" length="45" nullable="false"/>
+    <field name="telefon" type="string" column="telefon" length="45" nullable="false"/>
+    <field name="dataOd" type="string" column="data_od" length="45" nullable="false"/>
+    <field name="dataDo" type="string" column="data_do" length="45" nullable="false"/>
+    <many-to-one field="domekdomek" target-entity="Domek">
+      <join-columns>
+        <join-column name="domek_iddomek" referenced-column-name="iddomek"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

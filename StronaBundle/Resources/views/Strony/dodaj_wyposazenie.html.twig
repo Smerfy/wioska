@@ -1,0 +1,30 @@
+{% extends "StronaBundle::szablon.html.twig" %}
+{% block title %}Strona główna - {{ parent() }}{% endblock %}
+
+{% form_theme formularz 'StronaBundle:szablon:szablon_form.html.twig'  %}
+
+{%block conetner %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="page-header">
+  <h1>Dodaj Wyposazenie</h1>
+</div>
+    
+
+    {{form(formularz)}}
+    <a href ="glowna" class="btn btn-lg btn-primary" type="button">Powrót</a>
+    <br/><br/>
+    <div class="alert">
+        {%for type,messages in app.session.flashbag.all() %}
+            {%for msg in messages %}
+                <div class="alert alert-{{type}}">{{msg}}</div>
+                {%endfor%}
+            {%endfor%}
+    </div>
+            </div>
+    </div>
+    
+
+
+{%endblock%}
