@@ -1,0 +1,30 @@
+{% extends "StronaBundle::szablon.html.twig" %}
+{% block title %}Strona główna - {{ parent() }}{% endblock %}
+{%block conetner %} 
+    <article class="col-md-8">
+        <h1> Produkty </h1>
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nazwa</th>
+                    <th>Opis</th>
+                    <th>Slug</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for entry in rows %}
+                    <tr>
+                        <td>{{entry. }}</td>
+                        <td>{{entry. }}</td>
+                        <td>{{entry. }}</td>
+                        <td>{{entry. }}</td>
+                    </tr>
+                 {% endfor %}
+             </tbody>
+        </table>
+                    
+
+
+
+{%endblock%}

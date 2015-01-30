@@ -1,0 +1,55 @@
+{% extends "StronaBundle::szablon.html.twig" %}
+
+{% block title %}Strona główna - {{ parent() }}{% endblock %}
+{%block conetner %}
+    
+    
+    
+   <div class="container">
+        <div class="row">
+            <div class="page-header">
+  <h1>Klienci</h1>
+</div>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Imie</th>
+                        <th>Nazwisko</th>
+                        <th>Pesel</th>
+                        <th>Data urodzenia</th>
+                        <th>Miejscowosc</th>
+                        <th>Ulica</th>
+                        <th>Kod pocztowy</th>
+                        <th>Telefon</th>
+                        <th>Data od</th>
+                        <th>Data do</th>
+                        <th>Domek</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for entry in row %}
+                        <tr>
+                            <td>{{ entry.imie }}</td>
+                            <td>{{ entry.nazwisko }}</td>
+                            <td>{{ entry.pesel }}</td>
+                            <td>{{ entry.dataUrodzenia }}</td>
+                            <td>{{ entry.miejscowosc }}</td>
+                            <td>{{ entry.ulica }}</td>
+                            <td>{{ entry.kodPocztowy}}</td>
+                            <td>{{ entry.telefon}}</td>
+                            <td>{{ entry.dataOd}}</td>
+                            <td>{{ entry.dataDo}}</td>
+                            {#<td>{{ entry.domekdomek}}</td>#}
+                            
+                        </tr>
+                        {%endfor%}
+                </tbody>
+            </table>
+                
+                
+    
+    <a href ="glowna" class="btn btn-lg btn-primary" type="button">Powrót</a>
+            </div>
+    </div>
+                
+{%endblock%}
