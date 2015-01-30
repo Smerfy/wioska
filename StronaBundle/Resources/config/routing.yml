@@ -1,8 +1,0 @@
-strona_homepage:
-    path:     /
-    defaults: { _controller: StronaBundle:Strony:index }
-    
-strona_adnotacja:
-    resource: "@StronaBundle/Controller"
-    type:     annotation
-
